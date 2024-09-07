@@ -8,6 +8,9 @@ export default function Root() {
           <li>
             <Link to="/trading">Trading View</Link>
           </li>
+          <li>
+            <Link to="/profile">Profile</Link>
+          </li>
         </ul>
       </nav>
       <main style={{ flex: 1, padding: "20px" }}>

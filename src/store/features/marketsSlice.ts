@@ -2,10 +2,11 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { dydxApi } from '../../api/dydxClient';
+import { loadingState } from '../../types';
 
 interface MarketsState {
   entities: { [key: string]: any };
-  loading: 'idle' | 'pending' | 'succeeded' | 'failed';
+  loading: loadingState
   error: string | null;
 }
 
