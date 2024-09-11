@@ -8,8 +8,6 @@ import {
 } from "../../store/selectors/accountsSelector";
 
 import React from "react";
-import { Button } from "primereact/button";
-
 const Profile: React.FC = () => {
   const dispatch = useAppDispatch();
   const activeSubaccounts = useSelector(selectSubAccountsWithEquity);
@@ -22,9 +20,7 @@ const Profile: React.FC = () => {
   if (error) return <div>Error: {error}</div>;
   return (
     <div>
-      <Button label="Check" icon="pi pi-check" />
-      {/* <h2>Account: {activeSubaccounts[0].address}</h2>
-      <h2>Rewards: {totalRewards}</h2> */}
+      <h2>Rewards: {totalRewards}</h2>
     </div>
   );
 };

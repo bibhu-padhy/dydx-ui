@@ -1,10 +1,12 @@
 import "./App.css";
+import "primeflex/primeflex.css";
+import 'primeicons/primeicons.css';
+import "primereact/resources/themes/viva-dark/theme.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { PrimeReactProvider } from "primereact/api";
 import TradingView from "./pages/Tradingview/TradingView";
 import Root from "./pages/Root/Root";
 import Profile from "./pages/Profile/Profile";
-import "primereact/resources/themes/viva-dark/theme.css";
-import { PrimeReactProvider } from "primereact/api";
 
 const router = createBrowserRouter([
   {

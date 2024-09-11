@@ -1,20 +1,18 @@
-import { Link, Outlet } from "react-router-dom";
+import TradingView from "../Tradingview/TradingView";
+import UserInteraction from "../UserInteractionModule/UserInteraction";
 
 export default function Root() {
   return (
     <div>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/trading">Trading View</Link>
-          </li>
-          <li>
-            <Link to="/profile">Profile</Link>
-          </li>
-        </ul>
-      </nav>
       <main style={{ flex: 1, padding: "20px" }}>
-        <Outlet />
+        <div className="grid">
+          <div className="col-9">
+            <TradingView />
+          </div>
+          <div className="col-3">
+            <UserInteraction />
+          </div>
+        </div>
       </main>
     </div>
   );
