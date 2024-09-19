@@ -1,18 +1,17 @@
-import { useSelector } from "react-redux";
 import {
   selectAllOpenPositions,
   totalPnlSelector,
 } from "../../store/selectors/accountsSelector";
 import { useEffect } from "react";
 import { fetchAccounts } from "../../store/features/profileSlice";
-import { useAppDispatch } from "../../store";
+import { useAppDispatch, useAppSelector } from "../../store";
 import { Card } from "primereact/card";
 import { formatNum } from "../../utils";
 
 export default function Positions() {
   const dispatch = useAppDispatch();
-  const activeSubaccounts = useSelector(selectAllOpenPositions);
-  const totalPnl = useSelector(totalPnlSelector);
+  const activeSubaccounts = useAppSelector(selectAllOpenPositions);
+  const totalPnl = useAppSelector(totalPnlSelector);
   useEffect(() => {
     dispatch(fetchAccounts());
   }, [dispatch]);

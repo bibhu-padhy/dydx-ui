@@ -32,9 +32,15 @@ class DydxApiClient {
         }
     }
 
-    // async getSubaccountHistoricalPNLs():Promise<any>
+    async getSubaccountHistoricalPNLs(): Promise<any> {
+        return await this.indexerClient.account.getSubaccountHistoricalPNLs("dydx1r22frjep9wqf2ytu6yzr4lxefctsk682g5xscc", 0,)
+    }
+
+    async getSubaccountFills(): Promise<any> {
+        return await this.indexerClient.account.getSubaccountFills("dydx1r22frjep9wqf2ytu6yzr4lxefctsk682g5xscc", 0,)
+    }
 }
 
-// longes consucutive sequence
+
 
 export const dydxApi = new DydxApiClient();

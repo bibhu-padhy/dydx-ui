@@ -6,13 +6,15 @@
 import { configureStore } from "@reduxjs/toolkit"
 import marketsSlice from "./features/marketsSlice"
 import accountsReducer from "./features/profileSlice"
+import tradeHistoryReducer from "./features/tradeHistorySlice"
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux"
 
 
 export const store = configureStore({
     reducer: {
         markets: marketsSlice,
-        profile: accountsReducer
+        profile: accountsReducer,
+        tradeHistory: tradeHistoryReducer
     }
 })
 // Infer the `RootState` and `AppDispatch` types from the store itself
