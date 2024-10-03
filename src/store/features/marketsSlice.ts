@@ -20,6 +20,8 @@ export const fetchMarkets = createAsyncThunk<{ [key: string]: any }>(
   'markets/fetchMarkets',
   async () => {
     const response = await dydxApi.getMarkets();
+    console.log(response);
+
     return response;
   }
 );

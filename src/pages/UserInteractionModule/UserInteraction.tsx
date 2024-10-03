@@ -4,6 +4,7 @@ import PlaceOrder from "../PlaceOrder/PlaceOrder";
 import Positions from "../Positions/Positions";
 import TradeHistory from "../TradeHistory/TradeHistory";
 import Markets from "../Markets/MarketsPage";
+import ThoughtsPage from "../Thoughts/ThoughtsPage";
 
 export default function UserInteraction() {
   return (
@@ -11,6 +12,9 @@ export default function UserInteraction() {
       <TabView>
         <TabPanel header="Markets">
           <Markets />
+        </TabPanel>
+        <TabPanel header="Thoughts">
+          <ThoughtsPage />
         </TabPanel>
         <TabPanel header="Place Order">
           <PlaceOrder />
